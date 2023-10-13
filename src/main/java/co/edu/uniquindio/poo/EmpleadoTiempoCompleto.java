@@ -1,3 +1,12 @@
+/**
+ * Clase que representa un EmpleadoTiempoCompleto.
+ * Extiende la clase Empleado.
+ * 
+ * @author Área de programación UQ - Diego Flores
+ * @since 2023-10
+ * 
+ * Licencia GNU/GPL V3.0 (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE) 
+ */
 package co.edu.uniquindio.poo;
 
 import static co.edu.uniquindio.poo.util.AssertionUtil.ASSERTION;
@@ -14,7 +23,12 @@ public class EmpleadoTiempoCompleto extends Empleado {
     public int getSalario() {
         return salario;
     }
-    
+
+    /**
+     * Calcula el salario total del empleado a tiempo completo.
+     * 
+     * @return El salario total.
+     */
     public int calcularSalario() {
         return salario;
     }
