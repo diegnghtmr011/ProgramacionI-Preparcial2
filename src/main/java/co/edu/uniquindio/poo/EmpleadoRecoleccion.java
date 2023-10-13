@@ -3,8 +3,8 @@ package co.edu.uniquindio.poo;
 import static co.edu.uniquindio.poo.util.AssertionUtil.ASSERTION;
 
 public class EmpleadoRecoleccion extends Empleado {
-    private int numeroKilos;
-    private int valorKilo;
+    private final int numeroKilos;
+    private final int valorKilo;
 
     public EmpleadoRecoleccion(String nombre, String cargo, int numeroKilos, int valorKilo) {
         super(nombre, cargo);
@@ -18,16 +18,8 @@ public class EmpleadoRecoleccion extends Empleado {
         return numeroKilos;
     }
 
-    public void setNumeroKilos(int numeroKilos) {
-        this.numeroKilos = numeroKilos;
-    }
-
     public int getValorKilo() {
         return valorKilo;
-    }
-
-    public void setValorKilo(int valorKilo) {
-        this.valorKilo = valorKilo;
     }
 
     public int calcularSalario() {

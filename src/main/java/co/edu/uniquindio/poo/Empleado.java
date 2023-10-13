@@ -4,8 +4,8 @@ import static co.edu.uniquindio.poo.util.AssertionUtil.ASSERTION;
 
 
 public abstract class Empleado {
-    private String nombre;
-    private String cargo;
+    private final String nombre;
+    private final String cargo;
 
     public Empleado(String texto, String cargo) {
         ASSERTION.assertion(texto != null, "El texto es requerido");
@@ -18,16 +18,8 @@ public abstract class Empleado {
         return nombre;
     }
 
-    public void setNombre(String texto) {
-        this.nombre = texto;
-    }
-
     public String getCargo() {
         return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
     }
 
     public abstract int calcularSalario();

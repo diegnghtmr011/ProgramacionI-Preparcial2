@@ -3,8 +3,8 @@ package co.edu.uniquindio.poo;
 import static co.edu.uniquindio.poo.util.AssertionUtil.ASSERTION;
 
 public class EmpleadoTiempoParcial extends Empleado {
-    private int numeroHoras;
-    private int salarioHora;
+    private final int numeroHoras;
+    private final int salarioHora;
 
     public EmpleadoTiempoParcial(String nombre, String cargo, int numeroHoras, int salarioHora) {
         super(nombre, cargo);
@@ -18,16 +18,8 @@ public class EmpleadoTiempoParcial extends Empleado {
         return numeroHoras;
     }
 
-    public void setNumeroHoras(int numeroHoras) {
-        this.numeroHoras = numeroHoras;
-    }
-
     public int getSalarioHora() {
         return salarioHora;
-    }
-
-    public void setSalarioHora(int salarioHora) {
-        this.salarioHora = salarioHora;
     }
 
     public int calcularSalario() {

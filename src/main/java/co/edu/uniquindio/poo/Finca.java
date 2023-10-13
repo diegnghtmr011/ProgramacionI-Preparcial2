@@ -1,3 +1,11 @@
+/**
+ * Clase que representa una Finca y gestiona la colección de empleados.
+ * 
+ * @author Área de programación UQ - Diego Flores
+ * @since 2023-10
+ * 
+ * Licencia GNU/GPL V3.0 (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE) 
+ */
 package co.edu.uniquindio.poo;
 
 import static co.edu.uniquindio.poo.util.AssertionUtil.ASSERTION;
@@ -5,12 +13,13 @@ import static co.edu.uniquindio.poo.util.AssertionUtil.ASSERTION;
 import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 
 public class Finca {
-    private String nombre;
-    private Collection<Empleado> empleados;
+    private final String nombre;
+    private final Collection<Empleado> empleados;
 
     public Finca(String nombre) {
         ASSERTION.assertion(nombre != null, "El nombre es requerido");
@@ -22,16 +31,8 @@ public class Finca {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public Collection<Empleado> getEmpleados() {
-        return empleados;
-    }
-
-    public void setEmpleados(Collection<Empleado> empleados) {
-        this.empleados = empleados;
+        return Collections.unmodifiableCollection(empleados);
     }
 
     public Collection<EmpleadoTiempoParcial> listarEmpleadosTiempoParcial() {
